@@ -1,0 +1,27 @@
+{
+  "name": "telefire-connect-types",
+  "version": "0.0.1",
+  "description": "types for npm package telefire-panel-connect",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidVolodarsky/telefirePanelTypes.git"
+  },
+  "author": "David Volodarskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidVolodarsky/telefirePanelTypes/issues"
+  },
+  "homepage": "https://github.com/DavidVolodarsky/telefirePanelTypes#readme",
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "jest": "^28.1.0",
+    "ts-jest": "^28.0.2",
+    "typescript": "^4.6.4"
+  }
+}
