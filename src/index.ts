@@ -1,2 +1,16 @@
-export const Greeter = (name: string) => `Hello ${name}`;
-export const Waiter = (str: string) => `Test update ver ${str}`;
+import {ILoginRequest,
+    ILoginResponse,
+    ISetCommunicationReq,
+    ISetCommunicationRes,
+    IConnectPanelReq,
+    IConnectPanelRes,
+    IConfigurationData7000,
+    IConfigurationDataSaver,
+    IConfigurationDataGuard,
+    IConfigurationDataNewGuard,
+    IConfigurationData3000,
+    IGetConfigurationReq,
+    IGetConfigurationRes,
+    ISetConfigurationReq,
+    ISetConfigurationRes} from "./AllInterfaces";
+
