@@ -1,9 +1,8 @@
 {
   "name": "telefire-connect-types",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "types for npm package telefire-panel-connect",
   "main": "dist/index.js",
-
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc"
