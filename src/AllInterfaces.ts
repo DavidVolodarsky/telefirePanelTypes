@@ -318,7 +318,10 @@ interface IListProjectsRequest {
 }
 
 interface IListProjectsResponse {
-    Projects: IProject[]
+    Projects: IProject[],
+    Name: string,
+    Dir: string,
+    Count: string,
 }
 
 export {
