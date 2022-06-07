@@ -1,11 +1,13 @@
 {
   "name": "telefire-connect-types",
-  "version": "0.0.7",
+  "version": "0.0.5",
   "description": "types for npm package telefire-panel-connect",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "build": "tsc"
+    "build": "tsc",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
