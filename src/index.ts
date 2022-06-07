@@ -1,4 +1,4 @@
-import {ILoginRequest,
+export {ILoginRequest,
     ILoginResponse,
     ISetCommunicationReq,
     ISetCommunicationRes,
@@ -16,4 +16,3 @@ import {ILoginRequest,
     IProject,
     IListProjectsRequest,
     IListProjectsResponse} from "./AllInterfaces";
-
