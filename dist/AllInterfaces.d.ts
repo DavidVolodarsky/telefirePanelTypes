@@ -266,5 +266,8 @@ interface IListProjectsRequest {
 }
 interface IListProjectsResponse {
     Projects: IProject[];
+    Name: string;
+    Dir: string;
+    Count: string;
 }
 export { ILoginRequest, ILoginResponse, ISetCommunicationReq, ISetCommunicationRes, IConnectPanelReq, IConnectPanelRes, IConfigurationData7000, IConfigurationDataSaver, IConfigurationDataGuard, IConfigurationDataNewGuard, IConfigurationData3000, IGetConfigurationReq, IGetConfigurationRes, ISetConfigurationReq, ISetConfigurationRes, IProject, IListProjectsRequest, IListProjectsResponse, };
