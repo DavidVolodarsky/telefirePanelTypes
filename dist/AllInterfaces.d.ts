@@ -1,21 +1,14 @@
-
-//======== Interfaces for CONNECT =========
-
-//-----Login-------
 interface ILoginRequest {
     Name: string;
     CreateDirections: boolean;
     OldPcID?: string;
     NewPcID?: string;
 }
-
 interface ILoginResponse {
     Name: string;
     ClientNo: string;
     Result: string;
 }
-
-//---------Set Communication------
 interface ISetCommunicationReq {
     Name: string;
     Type: string;
@@ -26,20 +19,16 @@ interface ISetCommunicationReq {
     Ip: string;
     TcPort: number;
 }
-
 interface ISetCommunicationRes {
     Name: string;
     Type: string;
     Result: string;
 }
-
-//-------ConnectPanel-------
 interface IConnectPanelReq {
     Name: string;
     Panel: string;
     OwnerShip: string;
 }
-
 interface IConnectPanelRes {
     Name: string;
     ReqPanel: string;
@@ -52,64 +41,43 @@ interface IConnectPanelRes {
     date: string;
     ownership: string;
 }
-
-//============= Interfaces for CONFIGURATION ===============
-//--------------------- partnres -------------------------
 interface IConfigurationDataPartners7000 {
     panel: boolean;
     evacuation: boolean;
     silence: boolean;
     reset: boolean;
 }
-
-//----------- rms ----------------
 interface IConfigurationDataRM7000 {
     enable: boolean;
     description: string;
 }
-
-//----------- Nacs ------------------------
 interface IConfigurationDataNac7000 {
     silence: boolean;
     type: string;
     alarm: string;
 }
-
-//---------------- loops ----------------------
 interface IConfigurationDataLoops7000 {
     loop: string;
 }
-
-// --------------- com1,com2,com5 -----------------------
 interface IConfigurationDataCom7000 {
     type: string;
     control: string;
 }
-
-//------------------- relays -------------------------
 interface IConfigurationDataRealy7000 {
     type: string;
 }
-
-//---------------- dialer1,dialer2 -----------------------
 interface IConfigurationDataDialer7000 {
     type: string;
 }
-
-//------------------- groundfault ------------------------
 interface IConfigurationDataGNF7000 {
     type: string;
     valid: string;
 }
-
-//------------------ smockcontrol ------------------------
 interface IConfigurationDataSCM7000 {
     enable: boolean;
     dayofweek: string;
     hour: string;
 }
-
-//------------ pasystem ---------------------
 interface IConfigurationDataPA7000 {
     enable: boolean;
     active: boolean;
@@ -117,8 +85,6 @@ interface IConfigurationDataPA7000 {
     music: boolean;
     dealy: string;
 }
-
-//---- MAIN Interface for IConfigurationData7000 -----
 interface IConfigurationData7000 {
     partnres: IConfigurationDataPartners7000[];
     rms: IConfigurationDataRM7000[];
@@ -149,8 +115,6 @@ interface IConfigurationData7000 {
     option1: boolean;
     option2: boolean;
 }
-
-//---- MAIN Interface for IConfigurationDataSaver -----
 interface IConfigurationDataSaver {
     rms: IConfigurationDataRM7000[];
     Nacs: IConfigurationDataNac7000[];
@@ -174,8 +138,6 @@ interface IConfigurationDataSaver {
     preventsilencedelay: string;
     buzzerdelay: string;
 }
-
-//------ MAIN Interface for IConfigurationDataGuard ------
 interface IConfigurationDataGuard {
     rms: IConfigurationDataRM7000[];
     Nac1: IConfigurationDataNac7000;
@@ -198,8 +160,6 @@ interface IConfigurationDataGuard {
     preventsilencedelay: string;
     buzzerdelay: string;
 }
-
-//------ MAIN Interface for IConfigurationDataNewGuard ------
 interface IConfigurationDataNewGuard {
     rms: IConfigurationDataRM7000[];
     Nac1: IConfigurationDataNac7000;
@@ -223,8 +183,6 @@ interface IConfigurationDataNewGuard {
     preventsilencedelay: string;
     buzzerdelay: string;
 }
-
-//------- MAIN Interface for IConfigurationData3000 ---------
 interface IConfigurationData3000 {
     partnres: IConfigurationDataPartners7000[];
     rms: IConfigurationDataRM7000[];
@@ -232,16 +190,12 @@ interface IConfigurationData3000 {
     language: string;
     firstfaultdelay: string;
 }
-
-//-------- GET CONFIGURATION REQUEST ------------
 interface IGetConfigurationReq {
     Name: string;
     panel: string;
     source: string;
     type: string;
 }
-
-//-------- GET CONFIGURATION RESPONSE ------------
 interface IGetConfigurationRes {
     Name: string;
     panel: string;
@@ -254,8 +208,6 @@ interface IGetConfigurationRes {
     datanewguard: IConfigurationDataNewGuard;
     data3000: IConfigurationData3000;
 }
-
-//-------- SET CONFIGURATION REQUEST ------------
 interface ISetConfigurationReq {
     partnres: IConfigurationDataPartners7000[];
     rms: IConfigurationDataRM7000[];
@@ -293,8 +245,6 @@ interface ISetConfigurationReq {
     option1: boolean;
     option2: boolean;
 }
-
-//-------- SET CONFIGURATION RESPONSE ------------
 interface ISetConfigurationRes {
     Name: string;
     panel: string;
@@ -302,43 +252,19 @@ interface ISetConfigurationRes {
     type: string;
     Result: string;
 }
-
 interface IProject {
-    ProjectName: string,
-    Type: string,
-    versionscount: number,
-    createdate: string,
-    createby: string,
-    panels: number
+    ProjectName: string;
+    Type: string;
+    versionscount: number;
+    createdate: string;
+    createby: string;
+    panels: number;
 }
-
 interface IListProjectsRequest {
-    Name: string,
-    Dir: string
+    Name: string;
+    Dir: string;
 }
-
 interface IListProjectsResponse {
-    Projects: IProject[]
+    Projects: IProject[];
 }
-
-export {
-    ILoginRequest,
-    ILoginResponse,
-    ISetCommunicationReq,
-    ISetCommunicationRes,
-    IConnectPanelReq,
-    IConnectPanelRes,
-    IConfigurationData7000,
-    IConfigurationDataSaver,
-    IConfigurationDataGuard,
-    IConfigurationDataNewGuard,
-    IConfigurationData3000,
-    IGetConfigurationReq,
-    IGetConfigurationRes,
-    ISetConfigurationReq,
-    ISetConfigurationRes,
-    IProject,
-    IListProjectsRequest,
-    IListProjectsResponse,
-};
-
+export { ILoginRequest, ILoginResponse, ISetCommunicationReq, ISetCommunicationRes, IConnectPanelReq, IConnectPanelRes, IConfigurationData7000, IConfigurationDataSaver, IConfigurationDataGuard, IConfigurationDataNewGuard, IConfigurationData3000, IGetConfigurationReq, IGetConfigurationRes, ISetConfigurationReq, ISetConfigurationRes, IProject, IListProjectsRequest, IListProjectsResponse, };
