@@ -12,5 +12,8 @@ import {ILoginRequest,
     IGetConfigurationReq,
     IGetConfigurationRes,
     ISetConfigurationReq,
-    ISetConfigurationRes} from "./AllInterfaces";
+    ISetConfigurationRes,
+    IProject,
+    IListProjectsRequest,
+    IListProjectsResponse} from "./AllInterfaces";
 
