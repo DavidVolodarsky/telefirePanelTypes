@@ -1,6 +1,6 @@
 {
   "name": "telefire-connect-types",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "types for npm package telefire-panel-connect",
   "main": "dist/index.js",
   "scripts": {
