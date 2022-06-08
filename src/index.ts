@@ -1,4 +1,5 @@
-export {ILoginRequest,
+export {
+    ILoginRequest,
     ILoginResponse,
     ISetCommunicationReq,
     ISetCommunicationRes,
@@ -15,4 +16,10 @@ export {ILoginRequest,
     ISetConfigurationRes,
     IProject,
     IListProjectsRequest,
-    IListProjectsResponse} from "./AllInterfaces";
+    IListProjectsResponse,
+    IListProjectFilesRequest,
+    IProjectFile,
+    IListProjectFilesResponse,
+    ISelectProjectFileRequest,
+    ISelectProjectFileResponse,
+} from "./AllInterfaces";

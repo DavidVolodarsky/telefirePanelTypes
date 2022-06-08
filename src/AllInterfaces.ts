@@ -324,6 +324,33 @@ interface IListProjectsResponse {
     Count: string,
 }
 
+interface IListProjectFilesRequest {
+    Name: string,
+    Project: string,
+}
+
+interface IProjectFile {
+    FileName: string,
+}
+
+interface IListProjectFilesResponse {
+    Files: IProjectFile[],
+    Name: string,
+    Project: string,
+    Count: number,
+}
+
+interface ISelectProjectFileRequest {
+    Name: string,
+    filename: string,
+}
+
+interface ISelectProjectFileResponse {
+    Name: string,
+    filename: string,
+    Result: string,
+}
+
 export {
     ILoginRequest,
     ILoginResponse,
@@ -343,5 +370,10 @@ export {
     IProject,
     IListProjectsRequest,
     IListProjectsResponse,
+    IListProjectFilesRequest,
+    IProjectFile,
+    IListProjectFilesResponse,
+    ISelectProjectFileRequest,
+    ISelectProjectFileResponse,
 };
 
