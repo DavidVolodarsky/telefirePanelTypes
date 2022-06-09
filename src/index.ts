@@ -22,4 +22,6 @@ export {
     IListProjectFilesResponse,
     ISelectProjectFileRequest,
     ISelectProjectFileResponse,
+    ICreateNewProjectRequest,
+    ICreateNewProjectResponse,
 } from "./AllInterfaces";
