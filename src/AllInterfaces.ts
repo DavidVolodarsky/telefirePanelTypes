@@ -351,6 +351,24 @@ interface ISelectProjectFileResponse {
     Result: string,
 }
 
+interface ICreateNewProjectRequest {
+    panels: Record<string, string>,
+    Name: string,
+    dir: string,
+    projectname: string,
+    language: string,
+    count: number,
+    type: string,
+    user: string,
+}
+
+interface ICreateNewProjectResponse {
+    Name: string,
+    dir: string,
+    projectname: string,
+    Result: string,
+}
+
 export {
     ILoginRequest,
     ILoginResponse,
@@ -375,5 +393,7 @@ export {
     IListProjectFilesResponse,
     ISelectProjectFileRequest,
     ISelectProjectFileResponse,
+    ICreateNewProjectRequest,
+    ICreateNewProjectResponse,
 };
 

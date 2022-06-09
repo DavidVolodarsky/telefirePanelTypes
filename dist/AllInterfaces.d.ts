@@ -292,4 +292,20 @@ interface ISelectProjectFileResponse {
     filename: string;
     Result: string;
 }
-export { ILoginRequest, ILoginResponse, ISetCommunicationReq, ISetCommunicationRes, IConnectPanelReq, IConnectPanelRes, IConfigurationData7000, IConfigurationDataSaver, IConfigurationDataGuard, IConfigurationDataNewGuard, IConfigurationData3000, IGetConfigurationReq, IGetConfigurationRes, ISetConfigurationReq, ISetConfigurationRes, IProject, IListProjectsRequest, IListProjectsResponse, IListProjectFilesRequest, IProjectFile, IListProjectFilesResponse, ISelectProjectFileRequest, ISelectProjectFileResponse, };
+interface ICreateNewProjectRequest {
+    panels: Record<string, string>;
+    Name: string;
+    dir: string;
+    projectname: string;
+    language: string;
+    count: number;
+    type: string;
+    user: string;
+}
+interface ICreateNewProjectResponse {
+    Name: string;
+    dir: string;
+    projectname: string;
+    Result: string;
+}
+export { ILoginRequest, ILoginResponse, ISetCommunicationReq, ISetCommunicationRes, IConnectPanelReq, IConnectPanelRes, IConfigurationData7000, IConfigurationDataSaver, IConfigurationDataGuard, IConfigurationDataNewGuard, IConfigurationData3000, IGetConfigurationReq, IGetConfigurationRes, ISetConfigurationReq, ISetConfigurationRes, IProject, IListProjectsRequest, IListProjectsResponse, IListProjectFilesRequest, IProjectFile, IListProjectFilesResponse, ISelectProjectFileRequest, ISelectProjectFileResponse, ICreateNewProjectRequest, ICreateNewProjectResponse, };
