@@ -1,5 +1,22 @@
 
 //======== Interfaces for CONNECT =========
+//-----GetPCCodes-----
+interface IGetPCCodesReq {
+    Name :string,
+    Directory:string,
+    ProjectName:string,
+    FileName:string,
+    Panel :string,
+    Type :string,
+    Password :string,
+    PanelVersion :string,
+}
+
+interface IGetPCCodesRes {
+    Name: string,
+    OldPCId : string,
+    NewPCId : string,
+}
 
 //-----Login-------
 interface ILoginRequest {
@@ -370,6 +387,8 @@ interface ICreateNewProjectResponse {
 }
 
 export {
+    IGetPCCodesReq,
+    IGetPCCodesRes,
     ILoginRequest,
     ILoginResponse,
     ISetCommunicationReq,
