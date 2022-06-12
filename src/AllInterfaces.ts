@@ -3,13 +3,13 @@
 //-----GetPCCodes-----
 interface IGetPCCodesReq {
     Name :string,
-    Directory:string,
-    ProjectName:string,
-    FileName:string,
-    Panel :string,
-    Type :string,
-    Password :string,
-    PanelVersion :string,
+    Directory:string|undefined,
+    ProjectName:string|undefined,
+    FileName:string|undefined,
+    Panel :string|undefined,
+    Type :string|undefined,
+    Password :string|undefined,
+    PanelVersion :string|undefined,
 }
 
 interface IGetPCCodesRes {
