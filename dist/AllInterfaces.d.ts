@@ -1,3 +1,18 @@
+interface IGetPCCodesReq {
+    Name: string;
+    Directory: string;
+    ProjectName: string;
+    FileName: string;
+    Panel: string;
+    Type: string;
+    Password: string;
+    PanelVersion: string;
+}
+interface IGetPCCodesRes {
+    Name: string;
+    OldPCId: string;
+    NewPCId: string;
+}
 interface ILoginRequest {
     Name: string;
     CreateDirections: boolean;
@@ -308,4 +323,4 @@ interface ICreateNewProjectResponse {
     projectname: string;
     Result: string;
 }
-export { ILoginRequest, ILoginResponse, ISetCommunicationReq, ISetCommunicationRes, IConnectPanelReq, IConnectPanelRes, IConfigurationData7000, IConfigurationDataSaver, IConfigurationDataGuard, IConfigurationDataNewGuard, IConfigurationData3000, IGetConfigurationReq, IGetConfigurationRes, ISetConfigurationReq, ISetConfigurationRes, IProject, IListProjectsRequest, IListProjectsResponse, IListProjectFilesRequest, IProjectFile, IListProjectFilesResponse, ISelectProjectFileRequest, ISelectProjectFileResponse, ICreateNewProjectRequest, ICreateNewProjectResponse, };
+export { IGetPCCodesReq, IGetPCCodesRes, ILoginRequest, ILoginResponse, ISetCommunicationReq, ISetCommunicationRes, IConnectPanelReq, IConnectPanelRes, IConfigurationData7000, IConfigurationDataSaver, IConfigurationDataGuard, IConfigurationDataNewGuard, IConfigurationData3000, IGetConfigurationReq, IGetConfigurationRes, ISetConfigurationReq, ISetConfigurationRes, IProject, IListProjectsRequest, IListProjectsResponse, IListProjectFilesRequest, IProjectFile, IListProjectFilesResponse, ISelectProjectFileRequest, ISelectProjectFileResponse, ICreateNewProjectRequest, ICreateNewProjectResponse, };
