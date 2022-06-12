@@ -1,4 +1,6 @@
 export {
+    IGetPCCodesReq,
+    IGetPCCodesRes,
     ILoginRequest,
     ILoginResponse,
     ISetCommunicationReq,
