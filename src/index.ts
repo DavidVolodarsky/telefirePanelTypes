@@ -26,4 +26,14 @@ export {
     ISelectProjectFileResponse,
     ICreateNewProjectRequest,
     ICreateNewProjectResponse,
+    SetOneDeviceRequest,
+    ISetDevicesRequest,
+    ISetDevicesResponse,
+    IDeviceMatrix,
+    IZoneMatrix,
+    IGetMatrixRequest,
+    IGetMatrixResponse,
+    ISetOneMatrixRequest,
+    ISetMatrixesRequest,
+    ISetMatrixesResponse
 } from "./AllInterfaces";

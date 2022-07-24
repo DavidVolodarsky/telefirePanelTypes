@@ -320,6 +320,7 @@ interface ISetConfigurationRes {
     Result: string;
 }
 
+//===== INTERFACES FOR PROJECT ===================
 interface IProject {
     ProjectName: string,
     Type: string,
@@ -386,6 +387,117 @@ interface ICreateNewProjectResponse {
     Result: string,
 }
 
+//--------------- DEVICES ------------------
+interface SetOneDeviceRequest {
+    Serial: number;
+    Loop: number;
+    Address: number;
+    Program: boolean;
+    Description: string;
+    DeviceType: string;
+    Zone: number;
+    GlobalZone: boolean;
+    Mode: string;
+    Sensitivity: string;
+    NightSensitivity: string;
+    Prealarm: string;
+    Class: string;
+    Drill: boolean;
+    Silence: string;
+    Delay: string;
+    SmokeControlZone: string;
+    MaxAutoAct: string;
+    Conditions: string;
+    ZoneConditions: string;
+    Group: string;
+}
+
+interface ISetDevicesRequest {
+    Name: string;
+    Panel: string;
+    Source: string;
+    Password: string;
+    PanelVersion: number;
+    Type: string;
+    Count: number;
+    Devices: SetOneDeviceRequest[];
+}
+
+interface ISetDevicesResponse {
+    Name: string;
+    Panel: string;
+    Source: string;
+    Type: string;
+    Count: number;
+    Result: string;
+}
+
+//---------------- MATRIX -------------
+interface IDeviceMatrix {
+    Loop: number;
+    Address: number;
+}
+
+interface IZoneMatrix {
+    Zone: number;
+}
+
+interface IGetMatrixRequest {
+    Name: string;
+    Panel: string;
+    Loop: string;
+    Address: string;
+    Source: string;
+    PanelType: string;
+    Class: string;
+}
+
+interface IGetMatrixResponse {
+    Name: string;
+    Panel: string;
+    Loop: string;
+    Address: string;
+    Source: string;
+    PanelType: string;
+    Class: string;
+    Count: number;
+    Result: string;
+    Devices: IDeviceMatrix[];
+    Zones: IZoneMatrix[];
+}
+
+interface ISetOneMatrixRequest {
+    Loop: number;
+    Address: number;
+    Class: string;
+    Count: number;
+    ZoneConditions: string;
+    Conditions: string;
+    Devices: IDeviceMatrix[];
+    Zones: IZoneMatrix[];
+}
+
+interface ISetMatrixesRequest {
+    Name: string;
+    Panel: string;
+    Source: string;
+    Password: string;
+    PanelVersion: number;
+    Type: string;
+    Count: number;
+    Matrixes: ISetOneMatrixRequest[];
+}
+
+interface ISetMatrixesResponse {
+    Name: string;
+    Panel: string;
+    Source: string;
+    Type: string;
+    Count: number;
+    Result: string;
+}
+
+
 export {
     IGetPCCodesReq,
     IGetPCCodesRes,
@@ -414,5 +526,15 @@ export {
     ISelectProjectFileResponse,
     ICreateNewProjectRequest,
     ICreateNewProjectResponse,
+    SetOneDeviceRequest,
+    ISetDevicesRequest,
+    ISetDevicesResponse,
+    IDeviceMatrix,
+    IZoneMatrix,
+    IGetMatrixRequest,
+    IGetMatrixResponse,
+    ISetOneMatrixRequest,
+    ISetMatrixesRequest,
+    ISetMatrixesResponse
 };
 
