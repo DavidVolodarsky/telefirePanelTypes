@@ -497,6 +497,48 @@ interface ISetMatrixesResponse {
     Result: string;
 }
 
+//------------ Sync ----------------
+interface ISyncPanelToFileRequest {
+    Name: string;
+    Directory: string;
+    ProjectName: string;
+    bool: boolean;
+    Panel: string;
+    Type: string;
+    language: string;
+    user: string;
+    int: number;
+    IsNew: boolean;
+    panels: object; //Dictionary
+}
+
+interface ISyncPanelToFileResponse {
+    Name: string;
+    FileName: string;
+    Panel: string;
+    Type: string;
+    Result: string;
+}
+
+interface ISyncFileToPanelRequest {
+    Name: string;
+    Directory: string;
+    ProjectName: string;
+    FileName: string;
+    Panel: string;
+    Type: string;
+    Password: string;
+    PanelVersion: number;
+}
+
+interface ISyncFileToPanelResponse {
+    Name: string;
+    FileName: string;
+    Panel: string;
+    Type: string;
+    Result: string;
+}
+
 
 export {
     IGetPCCodesReq,
@@ -535,6 +577,10 @@ export {
     IGetMatrixResponse,
     ISetOneMatrixRequest,
     ISetMatrixesRequest,
-    ISetMatrixesResponse
+    ISetMatrixesResponse,
+    ISyncPanelToFileRequest,
+    ISyncPanelToFileResponse,
+    ISyncFileToPanelRequest,
+    ISyncFileToPanelResponse
 };
 

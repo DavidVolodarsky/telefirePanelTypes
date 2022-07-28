@@ -421,4 +421,41 @@ interface ISetMatrixesResponse {
     Count: number;
     Result: string;
 }
-export { IGetPCCodesReq, IGetPCCodesRes, ILoginRequest, ILoginResponse, ISetCommunicationReq, ISetCommunicationRes, IConnectPanelReq, IConnectPanelRes, IConfigurationData7000, IConfigurationDataSaver, IConfigurationDataGuard, IConfigurationDataNewGuard, IConfigurationData3000, IGetConfigurationReq, IGetConfigurationRes, ISetConfigurationReq, ISetConfigurationRes, IProject, IListProjectsRequest, IListProjectsResponse, IListProjectFilesRequest, IProjectFile, IListProjectFilesResponse, ISelectProjectFileRequest, ISelectProjectFileResponse, ICreateNewProjectRequest, ICreateNewProjectResponse, SetOneDeviceRequest, ISetDevicesRequest, ISetDevicesResponse, IDeviceMatrix, IZoneMatrix, IGetMatrixRequest, IGetMatrixResponse, ISetOneMatrixRequest, ISetMatrixesRequest, ISetMatrixesResponse };
+interface ISyncPanelToFileRequest {
+    Name: string;
+    Directory: string;
+    ProjectName: string;
+    bool: boolean;
+    Panel: string;
+    Type: string;
+    language: string;
+    user: string;
+    int: number;
+    IsNew: boolean;
+    panels: object;
+}
+interface ISyncPanelToFileResponse {
+    Name: string;
+    FileName: string;
+    Panel: string;
+    Type: string;
+    Result: string;
+}
+interface ISyncFileToPanelRequest {
+    Name: string;
+    Directory: string;
+    ProjectName: string;
+    FileName: string;
+    Panel: string;
+    Type: string;
+    Password: string;
+    PanelVersion: number;
+}
+interface ISyncFileToPanelResponse {
+    Name: string;
+    FileName: string;
+    Panel: string;
+    Type: string;
+    Result: string;
+}
+export { IGetPCCodesReq, IGetPCCodesRes, ILoginRequest, ILoginResponse, ISetCommunicationReq, ISetCommunicationRes, IConnectPanelReq, IConnectPanelRes, IConfigurationData7000, IConfigurationDataSaver, IConfigurationDataGuard, IConfigurationDataNewGuard, IConfigurationData3000, IGetConfigurationReq, IGetConfigurationRes, ISetConfigurationReq, ISetConfigurationRes, IProject, IListProjectsRequest, IListProjectsResponse, IListProjectFilesRequest, IProjectFile, IListProjectFilesResponse, ISelectProjectFileRequest, ISelectProjectFileResponse, ICreateNewProjectRequest, ICreateNewProjectResponse, SetOneDeviceRequest, ISetDevicesRequest, ISetDevicesResponse, IDeviceMatrix, IZoneMatrix, IGetMatrixRequest, IGetMatrixResponse, ISetOneMatrixRequest, ISetMatrixesRequest, ISetMatrixesResponse, ISyncPanelToFileRequest, ISyncPanelToFileResponse, ISyncFileToPanelRequest, ISyncFileToPanelResponse };
